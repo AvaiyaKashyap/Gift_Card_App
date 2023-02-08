@@ -1,5 +1,6 @@
 class global{
-  static int TotalPoint = 0;
+
+
 
   static List cards = [
     // {
