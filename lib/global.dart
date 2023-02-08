@@ -13,6 +13,25 @@ class global{
       'requiredPoints': '500 Points',
       'cardPrice': '500rs',
     },
-
+    {
+      'cardName': 'FlipKart',
+      'requiredPoints': '500 Points',
+      'cardPrice': '500rs',
+    },
+    {
+      'cardName': 'Roblox Gift Card',
+      'requiredPoints': '200 Points',
+      'cardPrice': '100robux',
+    },
+    {
+      'cardName': 'Play Store Gift Card',
+      'requiredPoints': '500 Points',
+      'cardPrice': '500rs',
+    },
+    {
+      'cardName': 'Free Fire Diamond',
+      'requiredPoints': '500 Points',
+      'cardPrice': '520 Diamonds',
+    },
   ];
 }

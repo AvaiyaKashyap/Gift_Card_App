@@ -1,3 +1,5 @@
+
+
 import 'package:ad_test/homePage.dart';
 import 'package:flutter/material.dart';
 import 'package:facebook_audience_network/facebook_audience_network.dart';
@@ -53,6 +55,9 @@ class _adtestState extends State<adtest> {
           if(result==RewardedVideoAdResult.VIDEO_COMPLETE)
             {
               print("user Got Rewards");
+             setState((){
+               global.TotalPoint +=500;
+             });
             }
         }
     );
@@ -100,7 +105,7 @@ class _adtestState extends State<adtest> {
                     children: global.cards.map((e) => Column(
                       children: [
                         Container(
-                          margin: EdgeInsets.all(2),
+                          margin: EdgeInsets.all(5),
                         ),
                         Container(
                           decoration: BoxDecoration(
@@ -118,6 +123,29 @@ class _adtestState extends State<adtest> {
                     )).toList(),
                   ),
                 )),
+            Container(
+              height: 100,
+              width: double.infinity,
+              color: Colors.brown,
+              alignment: Alignment.center,
+              child: Column(
+                children: [
+                  Container(
+                    child: Text("1 Point per AD"),
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: [
+                        ElevatedButton(onPressed: () {
+                          FacebookRewardedVideoAd.showRewardedVideoAd();
+                        }, child: Text("Earn Points")),
+                      ElevatedButton(onPressed: () {}, child: Text("Redeem Gift"))
+
+                    ],
+                  ),
+                  ],
+              ),
+            ),
           ],
         ),
       ),
